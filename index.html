@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÜPC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Kanit:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="upcavatar.png" alt="ÜPC">
+            </div>
+            <div class="social-and-text">
+                <div class="social-icons">
+                    <a href="#"><img src="telegram-icon.png" alt="Telegram"></a>
+                    <a href="#"><img src="vk-icon.png" alt="VK"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+                <div class="header-text">
+                    <h2>ÜPC | Gaming PC Builds</h2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">PC's</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Best <span>Gaming PC Builds</span></h1>
+                <p>Experience the ultimate gaming performance with our custom-built gaming PCs. Each system is meticulously crafted to deliver exceptional power and speed, ensuring you stay ahead in every game.</p>
+                <div class="button-group">
+                    <a href="#" class="btn">Buy Now</a>
+                    <div id="react-buttons"></div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="komp.png" alt="PC">
+            </div>
+        </div>
+
+        <section class="about-us">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>At ÜPC Gaming, we specialize in creating high-performance gaming PCs tailored to your needs. Our team of experts uses the latest technology and premium components to build systems that offer unbeatable gaming experiences.</p>
+                <p>Whether you're a professional gamer or a casual enthusiast, we have the perfect build for you. Our commitment to quality and customer satisfaction sets us apart, making us the go-to choice for gamers everywhere.</p>
+            </div>
+        </section>
+
+        <section class="work-examples">
+            <div class="container">
+                <h2>Work Examples</h2>
+                <div class="work-images">
+                    <img src="ex1.png" alt="Example 1">
+                    <img src="ex2.png" alt="Example 2">
+                    <img src="ex3.png" alt="Example 3">
+                    <img src="ex4.png" alt="Example 4">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="text/babel">
+        function App() {
+            const scrollToWorks = () => {
+                document.querySelector('.work-examples').scrollIntoView({ behavior: 'smooth' });
+            };
+
+            return (
+                <button className="btn btn-light" onClick={scrollToWorks}>To works</button>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('react-buttons'));
+    </script>
+</body>
+</html>
+	
